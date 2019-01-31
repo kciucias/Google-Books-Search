@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
+:root { --color-orange-dark: #8A2C02; --color-brown-medium: #572E1C; --color-brown-dark: #3E1401; --color-brown-light: #8A492C; --color-orange: #D74503; --color-light-1: #E7903C; --color-light-2: #FF6347; --color-light-3: #E76E3C; --color-light-4: #F64747; --color-light-5: #EF4836; --color-grey-light: #D3D3D3; --color-grey-dark: #ABB7B7; }
+
+* { margin: 0; padding: 0; }
+
+html { box-sizing: border-box; font-size: 62.5%; }
+
+body { font-family: 'Open Sans', sans-serif; font-weight: 400; background-image: linear-gradient(to right bottom, var(--color-brown-medium), var(--color-brown-light)); background-size: cover; background-repeat: no-repeat; min-height: 100vh; }
+
+.container { max-width: 120rem; margin: 4rem 14rem; background-color: var(--color-light-1); box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); min-height: 50rem; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; }
+
+.nav { background-image: url(../images/wood.jpg); background-size: cover; height: 30vh; box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: distribute; justify-content: space-around; -ms-flex-align: center; align-items: center; }
+
+.nav h1 { font-size: 3.2rem; text-transform: uppercase; font-weight: 700; color: var(--color-light-3); }
+
+.nav .search { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; }
+
+.nav .search .input-book { font-family: inherit; font-size: inherit; color: inherit; background-color: var(--color-grey-light); border: none; padding: .7rem 2rem; border-radius: 100px; -ms-flex: 0 0 50%; flex: 0 0 50%; }
+
+.nav .search .input-book:focus { outline: none; -ms-flex: 0 0 55%; flex: 0 0 55%; background-color: var(--color-grey-dark); }
+
+.nav .search .input-book::-webkit-input-placeholder { font-weight: 400; color: var(--color-brown-dark); }
+
+.nav .btn, .nav .btn:link, .nav .btn:visited { text-transform: uppercase; text-decoration: none; padding: 1.5rem 4rem; display: inline-block; border-radius: 10rem; transition: all .2s; font-size: inherit; border: none; cursor: pointer; background-color: var(--color-orange); color: var(--color-brown-dark); }
+
+.nav .btn:active, .nav .btn:focus { outline: none; transform: translateY(-1px); }
+
+.main-div { display: -ms-flexbox; display: flex; margin: 5rem 30rem; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.books-div { display: -ms-flexbox; display: flex; margin: 0 auto; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; }
