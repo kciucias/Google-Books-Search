@@ -44,9 +44,9 @@ function showBooks(resp) {
       dataDiv.appendChild(authors)
       authors.innerHTML = item.volumeInfo.authors
       // description
-      var description = document.createElement('p')
-      description.innerHTML = item.volumeInfo.description
-      dataDiv.appendChild(description)    
+      //var description = document.createElement('p')
+      //description.innerHTML = item.volumeInfo.description
+      //dataDiv.appendChild(description)    
       }
 }
 
