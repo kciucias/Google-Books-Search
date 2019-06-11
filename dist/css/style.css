@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; 
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%; 
+  } 
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
+  color: #655A56;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 2 * 4vw);  
+}
+
+.container {
+  max-width: 120rem;
+  margin: 4vw auto;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2rem 6rem 0.5rem rgba(101, 90, 86, 0.2);
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 20rem 1fr;
+  grid-template-areas: "nav nav nav" "lside main rside";
+}
+
+@media only screen and (max-width: 68.75em) {
+  .container {
+    width: 100%;
+    margin: 0;
+    border-radius: 0; 
+  } 
+}
+
+/* NAV */
+
+.nav {
+  background-color: #F9F5F3;
+  background-size: cover;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  grid-area: nav;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* FORM */
+
+.search {
+  background-color: #fff;
+  height: 6rem;
+  border-radius: 5rem;
+  padding-left: 3rem;
+  transition: all .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 0.7rem 3rem rgba(101, 90, 86, 0.08); 
+}
+
+/* INPUT */
+
+.input-book {
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.7rem;
+  width: 30rem;    
+}   
+      
+.input-book:focus {
+  outline: none;
+}
+
+.input-book::placeholder {
+  color: #DAD0CC;
+}
+
+/* BUTTON */
+
+.btn,
+.btn:link, 
+.btn:visited {
+  background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
+  border-radius: 5rem;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all .2s;
+
+  padding: 1.3rem 5rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.4rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}      
+
+.btn:hover {
+    transform: scale(1.05); 
+}
+
+span {
+    margin: 0 .4rem; 
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+}
+
+/* RESULTS */
+
+.results {
+  grid-area: lside;
+  padding: 3rem 0;
+}
+
+.results_list {
+  list-style: none;
+}
+
+.results_link,
+.results_link:link,
+.results_link:visited {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  transition: all .3s;
+  border-right: 1px solid #fff;
+  text-decoration: none; 
+}
+
+.results__link:hover {
+  background-color: #F9F5F3;
+  transform: translateY(-2px); 
+}
+
+.results__fig {
+  flex: 0 0 5.5rem;
+  overflow: hidden;
+  height: 19rem;
+  margin-right: 2rem;
+  position: relative;
+  backface-visibility: hidden;
+}
+
+.results__fig::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
+  opacity: .4; 
+}
+/*
+.results__fig img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all .3s; 
+}
+*/
+.results__name {
+    font-size: 1.3rem;
+    color: #F59A83;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: .3rem; 
+}
+  .results__author {
+    font-size: 1.1rem;
+    color: #968B87;
+    text-transform: uppercase;
+    font-weight: 600; 
+  }
+
+  .results__pages {
+    margin-top: 3rem;
+    padding: 0 3rem; 
+  }
+
+  .results__pages::after {
+    content: "";
+    display: table;
+    clear: both; 
+  }
+
+  .results__btn--prev {
+    float: left;
+    flex-direction: row-reverse; 
+  }
+
+  .results__btn--next {
+    float: right; 
+  }
+
+
+/* BOOK */
+
+.book {
+  background-color: #fff;
+  grid-area: main;
+}
+
+/* STORE */
+
+.store {
+  background-color: blue;
+  grid-area: rside;
+}
+
+
+
+
